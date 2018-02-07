@@ -1,0 +1,76 @@
+<!--pages/index/index.wxml-->
+
+<view class="container">
+  <!-- circular 是设置循环轮播 -->
+  <!-- indicator-dots 是否显示面板指示点 -->
+  <swiper class="post-swiper" circular="1" autoplay="1" indicator-dots="1">
+    <!-- <swiper-item>
+      <image src="/imgs/img1.png" style="height:400rpx;width:100%" bindtap="onPostTap" data-post-id="3" />
+    </swiper-item>
+
+    <swiper-item>
+      <image src="/imgs/img2.png" style="height:400rpx;width:100%" bindtap="onPostTap" data-post-id="4" />
+    </swiper-item>
+
+    <swiper-item>
+      <image src="/imgs/img3.png" style="height:400rpx;width:100%;" bindtap="onPostTap" data-post-id="5" />
+    </swiper-item> -->
+
+    <block wx:for="{{swiperData}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.imgSrc}}" bindtap="onPostTap" data-post-id="{{item.postId}}" />
+      </swiper-item>
+    </block>
+
+  </swiper>
+
+  <view class='post-item-container'>
+
+
+    <block wx:for="{{listData}}" wx:key="*this">
+    
+      <view class='post-item'>
+        <view class="post-avatar-date">
+          <image class='post-avatar' src="{{item.avatar}}"></image>
+          <text class='post-date'>{{item.dateTime}}</text>
+        </view>
+
+        <view class='post-article' bindtap='onPostTap' data-post-id="0">
+          <text class='post-title'>{{item.title}}</text>
+          <image class='post-coverImg' src='{{item.imgSrc}}' mode='aspectFill' />
+          <text class='post-content'>{{item.content}}</text>
+        </view>
+
+        <view class='post-collection-share'>
+
+          <image src="/imgs/icon/see.png" />
+          <text>{{item.reading}}</text>
+          <image src="/imgs/icon/msg.png" />
+          <text>{{item.collection}}</text>
+
+        </view>
+      </view>
+    </block>
+
+    <!-- <view class="post-avatar-date">
+        <image class='post-avatar' src="/imgs/avatar4.png"></image>
+        <text class='post-date'>Seq 12 2017</text>
+      </view>
+
+      <view class='post-article' bindtap='onPostTap' data-post-id="0">
+        <text class='post-title'>这是标题</text>
+        <image class='post-coverImg' src='/imgs/img1.png' mode='aspectFill' />
+        <text class='post-content'>这是内容概述</text>
+      </view>
+
+      <view class='post-collection-share'>
+
+        <image src="/imgs/icon/see.png" />
+        <text>985</text>
+        <image src="/imgs/icon/msg.png" />
+        <text>211</text>
+
+      </view> -->
+
+  </view>
+</view>

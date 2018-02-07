@@ -1,0 +1,5 @@
+<template name="myBtn">
+  <view class='btn {{btnColor}}' bindtap='toMina'>
+    <text class='btntext'>开启小程序之旅</text>
+  </view>
+</template>

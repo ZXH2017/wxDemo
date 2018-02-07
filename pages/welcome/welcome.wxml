@@ -1,0 +1,13 @@
+<import src="btn/btn.wxml"/>
+
+<!-- welcome.wxml 文件内容 -->
+<view class='container'>
+  <image src='{{imgSrc}}' class='meimg'></image>
+  <text class='motto'>Hello,{{name}}</text>
+  <!-- <button bindtap="toMina" type="default">开启小程序之旅</button> -->
+
+
+  <!-- view、text封装的一个简易按钮 -->
+  <template is="myBtn" data="{{btnColor}}"></template>
+
+</view>

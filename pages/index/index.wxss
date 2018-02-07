@@ -1,0 +1,76 @@
+/* pages/index/index.wxss */
+
+.container {
+  width: 100%;
+}
+
+.post-swiper {
+  height: 400rpx;
+  width: 100%;
+}
+
+.post-swiper image {
+  height: 400rpx;
+  width: 100%;
+}
+
+.post-item {
+  background-color: #fff;
+  margin-top: 30rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+
+.post-avatar-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.post-avatar {
+  height: 80rpx;
+  width: 80rpx;
+  margin-right: 20rpx;
+}
+
+.post-date {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.post-coverImg {
+  width: 750rpx;
+  height: 210rpx;
+  margin-left: -20rpx;
+  margin-top: 20rpx;
+}
+
+.post-content {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.post-collection-share {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-left: 500rpx;
+}
+
+.post-collection-share image {
+  height: 24rpx;
+  width: 24rpx;
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+}
+
+.post-collection-share text {
+  font-size: 26rpx;
+  color: #999;
+}
+
+page {
+  background-color: #eee;
+}
