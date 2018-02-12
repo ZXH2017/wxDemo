@@ -35,9 +35,9 @@
           <text class='post-date'>{{item.dateTime}}</text>
         </view>
 
-        <view class='post-article' bindtap='onPostTap' data-post-id="0">
-          <text class='post-title'>{{item.title}}</text>
-          <image class='post-coverImg' src='{{item.imgSrc}}' mode='aspectFill' />
+        <view class='post-article'>
+          <text class='post-title' bindtap="onPostTap" data-post-id="{{item.postId}}">{{item.title}}{{item.postId}}</text>
+          <image class='post-coverImg' src='{{item.imgSrc}}' mode='aspectFill'/>
           <text class='post-content'>{{item.content}}</text>
         </view>
 

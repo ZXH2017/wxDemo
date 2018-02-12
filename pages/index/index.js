@@ -149,33 +149,12 @@ Page({
 
   onPostTap: function (event) {
     var postId = event.target.dataset.postId;
-    console.log(postId);
 
     wx.navigateTo({
       url: 'post-detail/post-detail?postId=' + postId
     })
   },
 
-  // getHttpData: function (key, _type, callback) {
-  //   wx.request({
-  //     url: 'https://api.wxappclub.com/get',
-  //     data: {
-  //       "appkey": "eaa7gcwem04j8sak7hm8g88mkftgb26h",
-  //       "key": key,
-  //       "type": _type
-  //     },
-  //     method: 'GET',
-  //     header: {
-  //       'content-type': 'json'
-  //     },
-  //     success: function (res) {
-  //       if (res.data.success) {
-  //         console.log(res.data.result.value);
-  //         callback(res.data.result.value);
-  //       }
-  //     }
-  //   })
-  // },
   getHttpData: function (key, _type, callback) {
     wx.request({
       url: 'https://api.wxappclub.com/get',
@@ -196,6 +175,7 @@ Page({
       }
     })
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

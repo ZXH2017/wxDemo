@@ -1,2 +1,21 @@
 <!--pages/index/post-detail/post-detail.wxml-->
-<text>pages/index/post-detail/post-detail.wxml</text>
+<view class="post-container">
+  <image class='post-img' src='{{isPlaying?postData.music.coverImg:postData.headImgSrc}}'></image>
+  <image catchtap="onMusicTap" class="audio" src="/imgs/music/music-{{isPlaying?'stop':'start'}}.png"></image>
+
+  <view class='post-author-date'>
+    <image class='post-avatar' src='{{postData.avatar}}'></image>
+    <text class='post-author'>{{postData.author}}</text>
+    <text class='const-text'>发表于</text>
+    <text class='post-date'>{{postData.dateTime}}</text>
+  </view>
+
+  <text class='post-title'>{{postData.title}}</text>
+  <view class='post-collection-share'>
+    <image catchtap='onShareTap' class='post-share' src='/imgs/icon/share.png'></image>
+    <image catchtap='onCollectionTap' class='post-collection' src="/imgs/icon/collection{{collected?'':'-anit'}}.png"></image>
+  </view>
+
+  <view class='horizon'></view>
+  <text class='post-content'>{{postData.detail}}</text>
+</view>
