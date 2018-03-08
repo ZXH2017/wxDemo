@@ -132,7 +132,7 @@ Page({
     });
   },
   // key 表示数据名称，_type 数据类型，callback 表示请求成功的回调函数
-  getHttpData: function (key, _type, callback) {
+  getHttpData: function (key, _type, callback) {//这个方法是用来获取数据的，获取成功就把数据放到callback方法里
     wx.request({
       url: 'https://api.wxappclub.com/get',
       data: {
